@@ -1,0 +1,16 @@
+[
+{
+  "modid": "simplemre",
+  "name": "Simple MRE",
+  "description": "A Simple MOD that simulate MRE food.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["gonggongjohn"],
+  "credits": "Notch,Mojang,etc.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
