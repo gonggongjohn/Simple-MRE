@@ -1,5 +1,6 @@
 package com.gonggongjohn.simplemre.creativetab;
 
+import com.gonggongjohn.simplemre.block.BlockLoader;
 import com.gonggongjohn.simplemre.item.ItemLoader;
 
 import net.minecraft.creativetab.CreativeTabs;

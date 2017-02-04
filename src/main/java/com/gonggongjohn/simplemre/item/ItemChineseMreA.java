@@ -18,20 +18,5 @@ public class ItemChineseMreA extends Item
         this.setUnlocalizedName("chineseMreA");
         this.setCreativeTab(CreativeTabsLoader.tabSimpleMRE);
     }
-    
-    @Override
-    public ItemStack onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn)
-    {
-        if (!playerIn.capabilities.isCreativeMode)
-        {
-            --itemStackIn.stackSize;
-        }
-        if (!worldIn.isRemote)
-        {
-            BlockPos pos = playerIn.getPosition();
-            int id = GuiElementLoader.GUI_ChineseMreA;
-            playerIn.openGui(SimpleMRE.instance, id, worldIn, pos.getX(), pos.getY(), pos.getZ());
-        }
-        return itemStackIn;
-    }
+
 }

@@ -2,6 +2,7 @@ package com.gonggongjohn.simplemre.common;
 
 import com.gonggongjohn.simplemre.item.ItemLoader;
 import com.gonggongjohn.simplemre.creativetab.CreativeTabsLoader;
+import com.gonggongjohn.simplemre.block.BlockLoader;
 import com.gonggongjohn.simplemre.crafting.CraftingLoader;
 import com.gonggongjohn.simplemre.inventory.GuiElementLoader;
 
@@ -14,6 +15,7 @@ public class CommonProxy {
     {
     	new CreativeTabsLoader(event);
     	new ItemLoader(event);
+    	new BlockLoader(event);
     }
 
     public void init(FMLInitializationEvent event)
