@@ -3,6 +3,7 @@ package com.gonggongjohn.simplemre.common;
 import com.gonggongjohn.simplemre.item.ItemLoader;
 import com.gonggongjohn.simplemre.tileentity.TileEntityLoader;
 import com.gonggongjohn.simplemre.creativetab.CreativeTabsLoader;
+import com.gonggongjohn.simplemre.inventory.GuiElementLoader;
 import com.gonggongjohn.simplemre.block.BlockLoader;
 import com.gonggongjohn.simplemre.crafting.CraftingLoader;
 
@@ -23,6 +24,7 @@ public class CommonProxy {
     {
         new CraftingLoader();
         new EventLoader();
+        new GuiElementLoader();
     }
 
     public void postInit(FMLPostInitializationEvent event)

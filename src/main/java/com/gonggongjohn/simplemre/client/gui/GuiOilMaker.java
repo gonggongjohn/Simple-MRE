@@ -16,6 +16,7 @@ public class GuiOilMaker extends GuiContainer
     private static final ResourceLocation TEXTURE = new ResourceLocation(TEXTURE_PATH);
 
     protected ContainerOilMaker inventory;
+	private int totalWorkTime;
 
     public GuiOilMaker(ContainerOilMaker inventorySlotsIn)
     {
@@ -23,6 +24,7 @@ public class GuiOilMaker extends GuiContainer
         this.xSize = 175;
         this.ySize = 165;
         this.inventory = inventorySlotsIn;
+        this.totalWorkTime = inventorySlotsIn.getTotalWorkTime();
     }
 
     @Override
@@ -35,6 +37,8 @@ public class GuiOilMaker extends GuiContainer
 
         this.drawTexturedModalRect(offsetX, offsetY, 0, 0, this.xSize, this.ySize);
 
-        // TODO: draw progress bar
+        int workTime = this.inventory.getWorkTime();
+        int textureWidth = (int) Math.ceil(63.0 * workTime / this.totalWorkTime);
+        this.drawTexturedModalRect(offsetX + 79, offsetY + 15, 177, 0, 16, textureWidth);
     }
 }
