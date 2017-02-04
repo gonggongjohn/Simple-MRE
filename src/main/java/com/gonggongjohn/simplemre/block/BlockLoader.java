@@ -13,16 +13,19 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockLoader {
     public static Block oilMaker = new BlockOilMaker();
+    public static Block oilExtractor = new BlockOilExtractor();
 
     public BlockLoader(FMLPreInitializationEvent event)
     {
         register(oilMaker,"oil_maker");
+        register(oilExtractor,"oil_extractor");
     }
     
     @SideOnly(Side.CLIENT)
     public static void registerRenders()
     {
         registerRender(oilMaker);
+        registerRender(oilExtractor);
     }
 
     private static void register(Block block, String name)

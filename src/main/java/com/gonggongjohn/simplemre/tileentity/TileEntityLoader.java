@@ -11,9 +11,11 @@ public class TileEntityLoader
     public TileEntityLoader(FMLPreInitializationEvent event)
     {
         registerTileEntity(TileEntityOilMaker.class, "OilMaker");
+        registerTileEntity(TileEntityOilExtractor.class, "OilExtractor");
     }
 
-    public void registerTileEntity(Class<? extends TileEntity> tileEntityClass, String id)
+
+	public void registerTileEntity(Class<? extends TileEntity> tileEntityClass, String id)
     {
         GameRegistry.registerTileEntity(tileEntityClass, SimpleMRE.MODID + ":" + id);
     }

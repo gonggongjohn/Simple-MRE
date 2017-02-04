@@ -4,5 +4,6 @@ item.PCB.name=PCB
 item.pcbBase.name=PCB Base
 
 tile.oilMaker.name=Oil Maker
+tile.oilExtractor.name=Oil Extractor
 
 itemGroup.simplemre=Simple MRE
