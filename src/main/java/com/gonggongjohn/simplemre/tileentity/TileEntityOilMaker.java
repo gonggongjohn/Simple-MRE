@@ -71,13 +71,11 @@ public class TileEntityOilMaker extends TileEntity implements ITickable
     {
         if (!this.worldObj.isRemote)
         {
-            if (!this.worldObj.isRemote)
-            {
-                ItemStack itemStackA = leftInventory.extractItem(0, 8, true);
+                ItemStack itemStackA = leftInventory.extractItem(0, 1, true);
                 ItemStack itemStackB = leftInventory.extractItem(1, 1, true);
                 ItemStack itemStackC = leftInventory.extractItem(2, 1, true);
-                ItemStack itemStackD = leftInventory.extractItem(3, 5, true);
-				ItemStack itemStackE = new ItemStack( ItemLoader.chineseMreA, 1);
+                ItemStack itemStackD = leftInventory.extractItem(3, 1, true);
+				ItemStack itemStackE = new ItemStack( ItemLoader.oilDust, 1);
 				ItemStack itemStackF = new ItemStack( Items.bucket, 1);
                 IBlockState state = this.worldObj.getBlockState(pos);
 
@@ -88,13 +86,11 @@ public class TileEntityOilMaker extends TileEntity implements ITickable
                     if (++this.workTime >= workTotalTime)
                     {
                         this.workTime = 0;
-                        itemStackA = leftInventory.extractItem(0, 8, false);
+                        itemStackA = leftInventory.extractItem(0, 1, false);
                         itemStackB = leftInventory.extractItem(1, 1, false);
                         itemStackC = leftInventory.extractItem(2, 1, false);
-                        itemStackD = leftInventory.extractItem(3, 5, false);
+                        itemStackD = leftInventory.extractItem(3, 1, false);
                         rightInventory.insertItem(0, itemStackE, false);
-                        leftInventory.insertItem(1, itemStackF, false);
-                        leftInventory.insertItem(2, itemStackF, false);
                         this.markDirty();
                     }
                 }
@@ -102,7 +98,6 @@ public class TileEntityOilMaker extends TileEntity implements ITickable
                 {
                 	//TODO
                 }
-            }
 
         }
     }

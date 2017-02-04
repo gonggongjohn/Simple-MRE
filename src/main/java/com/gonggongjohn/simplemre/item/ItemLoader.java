@@ -11,16 +11,25 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemLoader {
     public static Item chineseMreA = new ItemChineseMreA();
+    public static Item oilDust = new ItemOilDust();
+    public static Item PCB = new ItemPcb();
+    public static Item pcbBase = new ItemPcbBase();
 
     public ItemLoader(FMLPreInitializationEvent event)
     {
         register(chineseMreA, "chinese_mre_a");
+        register(oilDust, "oil_dust");
+        register(PCB, "pcb");
+        register(pcbBase, "pcb_base");
     }
     
     @SideOnly(Side.CLIENT)
     public static void registerRenders()
     {
         registerRender(chineseMreA);
+        registerRender(oilDust);
+        registerRender(PCB);
+        registerRender(pcbBase);
     }
 
     private static void register(Item item, String name)
