@@ -1,7 +1,7 @@
 package com.gonggongjohn.simplemre.inventory;
 
 import com.gonggongjohn.simplemre.SimpleMRE;
-import com.gonggongjohn.simplemre.client.gui.GuiContainerChineseMreA;
+import com.gonggongjohn.simplemre.client.gui.GuiOilMaker;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.BlockPos;
@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 public class GuiElementLoader implements IGuiHandler
 {
-    public static final int GUI_ChineseMreA = 1;
+    public static final int GUI_OIL_MAKER = 1;
 
     public GuiElementLoader()
     {
@@ -23,8 +23,8 @@ public class GuiElementLoader implements IGuiHandler
     {
         switch (ID)
         {
-        case GUI_ChineseMreA:
-            return new ContainerChineseMreA(player);
+        case GUI_OIL_MAKER:
+            return new ContainerOilMaker(player, world.getTileEntity(new BlockPos(x, y, z)));
         default:
             return null;
         }
@@ -35,8 +35,8 @@ public class GuiElementLoader implements IGuiHandler
     {
         switch (ID)
         {
-        case GUI_ChineseMreA:
-            return new GuiContainerChineseMreA(new ContainerChineseMreA(player));
+        case GUI_OIL_MAKER:
+            return new GuiOilMaker(new ContainerOilMaker(player, world.getTileEntity(new BlockPos(x, y, z))));
         default:
             return null;
         }

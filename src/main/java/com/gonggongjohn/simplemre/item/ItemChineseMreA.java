@@ -2,7 +2,6 @@ package com.gonggongjohn.simplemre.item;
 
 import com.gonggongjohn.simplemre.SimpleMRE;
 import com.gonggongjohn.simplemre.creativetab.CreativeTabsLoader;
-import com.gonggongjohn.simplemre.inventory.GuiElementLoader;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;

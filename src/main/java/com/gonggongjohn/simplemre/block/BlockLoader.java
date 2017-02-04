@@ -3,6 +3,7 @@ package com.gonggongjohn.simplemre.block;
 import net.minecraft.block.Block;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemMultiTexture;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameData;
@@ -15,7 +16,7 @@ public class BlockLoader {
 
     public BlockLoader(FMLPreInitializationEvent event)
     {
-        register(oilMaker, "oil_maker");
+        register(oilMaker,"oil_maker");
     }
     
     @SideOnly(Side.CLIENT)
